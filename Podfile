@@ -6,6 +6,7 @@ target 'Hungry' do
   use_frameworks!
 	pod ‘AFNetworking’, ‘~> 2.6’
 	pod 'Parse'
+	pod 'ParseUI’
   # Pods for Hungry
 	
 	
