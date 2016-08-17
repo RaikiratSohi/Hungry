@@ -36,6 +36,8 @@
 		6801142C1D63EF0100FF3DF2 /* Eater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6801142B1D63EF0100FF3DF2 /* Eater.storyboard */; };
 		6801142E1D63EF0B00FF3DF2 /* Cook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6801142D1D63EF0B00FF3DF2 /* Cook.storyboard */; };
 		8BCFFE404E0BFCEEDB4A0F8C /* Pods_Hungry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C347947929721FB6A1886BAB /* Pods_Hungry.framework */; };
+		D869296C1D63F63F002B63C2 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D869296B1D63F63F002B63C2 /* ParseClient.swift */; };
+		D869296E1D63F683002B63C2 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D869296D1D63F683002B63C2 /* Offer.swift */; };
 		DBCEC06EAE0C5C59151B0493 /* Pods_HungryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4578FED40BD20228F211661 /* Pods_HungryUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		B4578FED40BD20228F211661 /* Pods_HungryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HungryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C347947929721FB6A1886BAB /* Pods_Hungry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hungry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74853AF4496A63C33B15C43 /* Pods-HungryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HungryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HungryUITests/Pods-HungryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D869296B1D63F63F002B63C2 /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
+		D869296D1D63F683002B63C2 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,7 @@
 		6801142F1D63EF2F00FF3DF2 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D869296B1D63F63F002B63C2 /* ParseClient.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 		680114301D63EF3600FF3DF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D869296D1D63F683002B63C2 /* Offer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -551,8 +557,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D869296E1D63F683002B63C2 /* Offer.swift in Sources */,
 				680114071D638A2600FF3DF2 /* SwitchViewController.swift in Sources */,
 				680114031D6389E900FF3DF2 /* LoginViewController.swift in Sources */,
+				D869296C1D63F63F002B63C2 /* ParseClient.swift in Sources */,
 				0EC3C28A1D5D9F9E000E6CE4 /* ViewController.swift in Sources */,
 				680114051D638A0200FF3DF2 /* SignupViewController.swift in Sources */,
 				680114011D63899300FF3DF2 /* LoginSignupViewController.swift in Sources */,
