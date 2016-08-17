@@ -35,6 +35,7 @@
 		680114231D638CC700FF3DF2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680114221D638CC700FF3DF2 /* Social.framework */; };
 		6801142C1D63EF0100FF3DF2 /* Eater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6801142B1D63EF0100FF3DF2 /* Eater.storyboard */; };
 		6801142E1D63EF0B00FF3DF2 /* Cook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6801142D1D63EF0B00FF3DF2 /* Cook.storyboard */; };
+		680114341D63F5D300FF3DF2 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680114331D63F5D300FF3DF2 /* testViewController.swift */; };
 		8BCFFE404E0BFCEEDB4A0F8C /* Pods_Hungry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C347947929721FB6A1886BAB /* Pods_Hungry.framework */; };
 		DBCEC06EAE0C5C59151B0493 /* Pods_HungryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4578FED40BD20228F211661 /* Pods_HungryUITests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		680114221D638CC700FF3DF2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6801142B1D63EF0100FF3DF2 /* Eater.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Eater.storyboard; sourceTree = "<group>"; };
 		6801142D1D63EF0B00FF3DF2 /* Cook.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cook.storyboard; sourceTree = "<group>"; };
+		680114331D63F5D300FF3DF2 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		7876E59BB96CEBDD8F1A8905 /* Pods-Hungry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hungry.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hungry/Pods-Hungry.release.xcconfig"; sourceTree = "<group>"; };
 		7FD6B460CB181C58149A6263 /* Pods-Hungry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hungry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hungry/Pods-Hungry.debug.xcconfig"; sourceTree = "<group>"; };
 		9C56F6D21C9285E4A6E61621 /* Pods-HungryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HungryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HungryTests/Pods-HungryTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				6801142D1D63EF0B00FF3DF2 /* Cook.storyboard */,
+				680114331D63F5D300FF3DF2 /* testViewController.swift */,
 			);
 			name = Cook;
 			sourceTree = "<group>";
@@ -553,6 +556,7 @@
 			files = (
 				680114071D638A2600FF3DF2 /* SwitchViewController.swift in Sources */,
 				680114031D6389E900FF3DF2 /* LoginViewController.swift in Sources */,
+				680114341D63F5D300FF3DF2 /* testViewController.swift in Sources */,
 				0EC3C28A1D5D9F9E000E6CE4 /* ViewController.swift in Sources */,
 				680114051D638A0200FF3DF2 /* SignupViewController.swift in Sources */,
 				680114011D63899300FF3DF2 /* LoginSignupViewController.swift in Sources */,
