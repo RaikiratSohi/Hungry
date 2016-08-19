@@ -32,6 +32,10 @@ class Offer: PFObject, PFSubclassing {
     
     @NSManaged var price: Double
     
+    @NSManaged var address: String
+    
+    @NSManaged var pickupTime: String
+    
     @NSManaged var chef: PFUser
     
     @NSManaged var eater: PFUser?
