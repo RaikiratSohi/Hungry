@@ -26,6 +26,8 @@ class Offer: PFObject, PFSubclassing {
     
     @NSManaged var foodType: String
     
+    @NSManaged var title: String
+    
     @NSManaged var foodDescription: String
     
     @NSManaged var price: Double
