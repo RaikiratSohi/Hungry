@@ -24,13 +24,17 @@ class ParseClient: NSObject {
         // $0.localDatastoreEnabled = true
     }
     
-    static var defaultACL: PFACL?
+    static let defaultACL = PFACL ()
     
     class func initializeWithConfiguration() {
+        // according to https://parseplatform.github.io/docs/ios/guide/#subclasses
+        // do initialize for all the subclasses first
+        Offer.initialize()
+        
         Parse.initializeWithConfiguration(configuration)
         
         // If you would like all objects to be private by default, remove this line.
-        defaultACL?.publicReadAccess = true
+        defaultACL.publicReadAccess = true
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
     }
     
