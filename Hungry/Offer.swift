@@ -39,4 +39,6 @@ class Offer: PFObject, PFSubclassing {
     @NSManaged var chef: PFUser
     
     @NSManaged var eater: PFUser?
+    
+    @NSManaged var imageFile: PFFile?
 }

@@ -48,7 +48,7 @@ class ParseClient: NSObject {
             query.addDescendingOrder(orderByKey)
         }
         
-        query.includeKeys(["chef", "eater"])
+        query.includeKeys(["chef", "eater", "imageFile"])
         
         query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error) in
             if (nil == error) {

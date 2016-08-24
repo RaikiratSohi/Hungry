@@ -32,20 +32,98 @@
                         <viewControllerLayoutGuide type="bottom" id="5Dw-lm-ppY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="orY-N8-xP5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XcI-2Q-7G9">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XcI-2Q-7G9">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfferCell" id="EGe-em-4eh" customClass="OfferCell" customModule="Hungry" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OfferCell" rowHeight="100" id="EGe-em-4eh" customClass="OfferCell" customModule="Hungry" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EGe-em-4eh" id="kj5-3b-DlS">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PE4-7G-bLm">
+                                                    <rect key="frame" x="8" y="8" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="ICW-89-u4e"/>
+                                                        <constraint firstAttribute="width" constant="60" id="hJK-Sw-DOt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Veggie Burger" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRt-7T-IX5">
+                                                    <rect key="frame" x="76" y="8" width="330" height="16"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner for two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBk-SX-jUr">
+                                                    <rect key="frame" x="76" y="28" width="81" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S Murphy Ave, Sunnyvale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCk-Dh-UzM">
+                                                    <rect key="frame" x="76" y="51" width="143" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-r6-Wnx">
+                                                    <rect key="frame" x="390" y="28" width="15.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".5 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynr-dV-0Av">
+                                                    <rect key="frame" x="378" y="51" width="27.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection time: 14:45 - 15:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bu-y1-zcp">
+                                                    <rect key="frame" x="76" y="69" width="168" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FRt-7T-IX5" firstAttribute="leading" secondItem="PE4-7G-bLm" secondAttribute="trailing" constant="8" id="4jO-zL-RpO"/>
+                                                <constraint firstItem="DBk-SX-jUr" firstAttribute="leading" secondItem="FRt-7T-IX5" secondAttribute="leading" id="DCe-6M-U9A"/>
+                                                <constraint firstItem="2bu-y1-zcp" firstAttribute="leading" secondItem="FRt-7T-IX5" secondAttribute="leading" id="DhM-ee-ixe"/>
+                                                <constraint firstItem="DBk-SX-jUr" firstAttribute="top" secondItem="FRt-7T-IX5" secondAttribute="bottom" constant="4" id="JuE-dk-v9w"/>
+                                                <constraint firstItem="FRt-7T-IX5" firstAttribute="top" secondItem="PE4-7G-bLm" secondAttribute="top" id="RgT-gp-hzW"/>
+                                                <constraint firstItem="Ynr-dV-0Av" firstAttribute="bottom" secondItem="XCk-Dh-UzM" secondAttribute="bottom" id="T2K-uM-Xdb"/>
+                                                <constraint firstItem="XCk-Dh-UzM" firstAttribute="top" secondItem="DBk-SX-jUr" secondAttribute="bottom" constant="8" id="W0S-O4-QKF"/>
+                                                <constraint firstItem="Ynr-dV-0Av" firstAttribute="trailing" secondItem="fCB-r6-Wnx" secondAttribute="trailing" id="WWY-Zp-w7P"/>
+                                                <constraint firstItem="fCB-r6-Wnx" firstAttribute="baseline" secondItem="DBk-SX-jUr" secondAttribute="baseline" id="XgV-aM-UMa"/>
+                                                <constraint firstItem="2bu-y1-zcp" firstAttribute="top" secondItem="XCk-Dh-UzM" secondAttribute="bottom" constant="4" id="cYc-4l-73f"/>
+                                                <constraint firstItem="fCB-r6-Wnx" firstAttribute="bottom" secondItem="DBk-SX-jUr" secondAttribute="bottom" id="dWp-Dm-ieI"/>
+                                                <constraint firstItem="PE4-7G-bLm" firstAttribute="leading" secondItem="kj5-3b-DlS" secondAttribute="leading" constant="8" id="dh8-Cj-MtN"/>
+                                                <constraint firstItem="XCk-Dh-UzM" firstAttribute="leading" secondItem="FRt-7T-IX5" secondAttribute="leading" id="kcH-jg-9KS"/>
+                                                <constraint firstAttribute="trailing" secondItem="FRt-7T-IX5" secondAttribute="trailing" constant="8" id="qHm-kb-hty"/>
+                                                <constraint firstAttribute="trailing" secondItem="fCB-r6-Wnx" secondAttribute="trailing" constant="8" id="sbK-9j-MQM"/>
+                                                <constraint firstItem="PE4-7G-bLm" firstAttribute="top" secondItem="kj5-3b-DlS" secondAttribute="top" constant="8" id="sr7-Wy-EV4"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2bu-y1-zcp" secondAttribute="bottom" constant="12" id="wsc-Ca-jCW"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="XgV-aM-UMa"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="Ynr-dV-0Av" id="tgO-eo-TYa"/>
+                                            <outlet property="foodTypeLabel" destination="DBk-SX-jUr" id="btQ-Ns-WY4"/>
+                                            <outlet property="offerImage" destination="PE4-7G-bLm" id="3Zk-PQ-u5u"/>
+                                            <outlet property="pickupAddrLabel" destination="XCk-Dh-UzM" id="9kb-uB-2uQ"/>
+                                            <outlet property="pickupTimeLabel" destination="2bu-y1-zcp" id="u3c-po-fFU"/>
+                                            <outlet property="priceLabel" destination="fCB-r6-Wnx" id="GuQ-Fs-Rah"/>
+                                            <outlet property="titleLabel" destination="FRt-7T-IX5" id="pRf-2M-3nt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -59,7 +137,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lkY-cD-QAQ"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="tableView" destination="XcI-2Q-7G9" id="y3J-Oi-Yrn"/>
                     </connections>
