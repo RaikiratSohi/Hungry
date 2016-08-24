@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CookViewController: UIViewController {
+class CookViewController: UIViewController,UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
 
     @IBOutlet weak var titleField: UITextField!
     
@@ -30,6 +31,30 @@ class CookViewController: UIViewController {
     }
     
 
+    @IBAction func onCameraButton(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    
+    }
+    
+    
+    @IBAction func onGalleryButton(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            imagePicker.allowsEditing = true
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    
+    
+    }
+    
     @IBAction func onSubmitAction(sender: AnyObject) {
         let offer = Offer()
         offer.title = titleField.text ?? ""

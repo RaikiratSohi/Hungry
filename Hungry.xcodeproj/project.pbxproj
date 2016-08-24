@@ -372,6 +372,7 @@
 				TargetAttributes = {
 					0EC3C2831D5D9F9E000E6CE4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 38MNL72G33;
 					};
 					0EC3C2971D5D9F9E000E6CE4 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -713,10 +714,13 @@
 			baseConfigurationReference = 7FD6B460CB181C58149A6263 /* Pods-Hungry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hungry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = walmart.Hungry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -725,10 +729,13 @@
 			baseConfigurationReference = 7876E59BB96CEBDD8F1A8905 /* Pods-Hungry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Hungry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = walmart.Hungry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
