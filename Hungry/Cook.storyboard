@@ -91,6 +91,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionField" destination="8sl-fz-cf2" id="opG-jD-cdA"/>
+                        <outlet property="imageView" destination="H66-Dh-AAg" id="g6D-oQ-tCy"/>
                         <outlet property="priceField" destination="ZRb-6s-t9n" id="ErS-JM-Egm"/>
                         <outlet property="titleField" destination="uru-BH-4I2" id="uFV-AN-69I"/>
                         <outlet property="typeField" destination="VRP-oX-Pld" id="Q55-CP-pme"/>

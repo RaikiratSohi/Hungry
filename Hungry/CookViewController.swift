@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class CookViewController: UIViewController,UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
@@ -18,6 +19,9 @@ UINavigationControllerDelegate {
     @IBOutlet weak var typeField: UITextField!
     
     @IBOutlet weak var descriptionField: UITextView!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,12 +59,19 @@ UINavigationControllerDelegate {
     
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        imageView.image = image
+        self.dismissViewControllerAnimated(true, completion: nil);
+    }
+    
     @IBAction func onSubmitAction(sender: AnyObject) {
         let offer = Offer()
         offer.title = titleField.text ?? ""
         //offer.price = priceField.text ?? 0.0
         offer.foodType = typeField.text ?? ""
         offer.foodDescription = descriptionField.text ?? ""
+        let imageData = UIImagePNGRepresentation(imageView.image!)
+        offer.imageFile = PFFile(name:"image.png", data:imageData!)
         
         offer.saveInBackgroundWithBlock { (done, error) in
                     if done {
