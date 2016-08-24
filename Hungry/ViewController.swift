@@ -40,13 +40,13 @@ class ViewController: UIViewController {
 //                print(error)
 //            }
 //        }
-//        
-//        ParseClient.queryOffers(10, orderDescendingByKey: nil) { (offers, error) in
-//            if nil != offers {
-//                print("Got \(offers.count) offers from server")
-//                print("First offer is \(offers[0].foodDescription) at \(offers[0].price) for \(offers[0].foodType)")
-//            }
-//        }
+//
+        ParseClient.queryOffers(10, orderDescendingByKey: nil) { (offers, error) in
+            if nil != offers {
+                print("Got \(offers.count) offers from server")
+                print("First offer is \(offers[0].foodDescription) at \(offers[0].price) for \(offers[0].foodType)")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

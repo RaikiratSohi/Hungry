@@ -39,6 +39,8 @@
 		D7ECE35B1D6424C8003173D3 /* CookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ECE35A1D6424C8003173D3 /* CookViewController.swift */; };
 		D869296C1D63F63F002B63C2 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D869296B1D63F63F002B63C2 /* ParseClient.swift */; };
 		D869296E1D63F683002B63C2 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D869296D1D63F683002B63C2 /* Offer.swift */; };
+		D8AE21DD1D668F6300DC3E99 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE21DC1D668F6300DC3E99 /* OffersViewController.swift */; };
+		D8AE21DF1D66902E00DC3E99 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE21DE1D66902E00DC3E99 /* OfferCell.swift */; };
 		DBCEC06EAE0C5C59151B0493 /* Pods_HungryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4578FED40BD20228F211661 /* Pods_HungryUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +107,8 @@
 		D7ECE35A1D6424C8003173D3 /* CookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookViewController.swift; sourceTree = "<group>"; };
 		D869296B1D63F63F002B63C2 /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
 		D869296D1D63F683002B63C2 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		D8AE21DC1D668F6300DC3E99 /* OffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		D8AE21DE1D66902E00DC3E99 /* OfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				6801142B1D63EF0100FF3DF2 /* Eater.storyboard */,
+				D8AE21DC1D668F6300DC3E99 /* OffersViewController.swift */,
+				D8AE21DE1D66902E00DC3E99 /* OfferCell.swift */,
 			);
 			name = Eater;
 			sourceTree = "<group>";
@@ -562,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7ECE35B1D6424C8003173D3 /* CookViewController.swift in Sources */,
+				D8AE21DF1D66902E00DC3E99 /* OfferCell.swift in Sources */,
 				D869296E1D63F683002B63C2 /* Offer.swift in Sources */,
 				680114071D638A2600FF3DF2 /* SwitchViewController.swift in Sources */,
 				680114031D6389E900FF3DF2 /* LoginViewController.swift in Sources */,
@@ -570,6 +577,7 @@
 				680114051D638A0200FF3DF2 /* SignupViewController.swift in Sources */,
 				680114011D63899300FF3DF2 /* LoginSignupViewController.swift in Sources */,
 				0EC3C2881D5D9F9E000E6CE4 /* AppDelegate.swift in Sources */,
+				D8AE21DD1D668F6300DC3E99 /* OffersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
