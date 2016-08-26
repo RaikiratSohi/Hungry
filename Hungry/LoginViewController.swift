@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class LoginViewController: UIViewController {
 
     
@@ -15,10 +15,17 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    var actInd: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0,150,150)) as UIActivityIndicatorView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.actInd.center = self.view.center
+        
+        self.actInd.hidesWhenStopped = true
+        
+        self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        view.addSubview(self.actInd)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,8 +47,44 @@ class LoginViewController: UIViewController {
     //MARK: Actions
     
     @IBAction func loginAction(sender: AnyObject) {
+        
+        var username = self.usernameField.text
+        var password = self.passwordField.text
+        
+
+        
+        
+        if( username?.characters.count < 4 || password?.characters.count < 4 ){
+            var alert = UIAlertView(title:"Invalid", message: "Password must be gretaer than 5.", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        }
+        else{
+        self.actInd.startAnimating()
+            PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user, error) ->
+                Void in
+                
+                self.actInd.startAnimating()
+                
+                if((user) != nil){
+                    var alert = UIAlertView(title:"Success", message: "logged in", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                }
+                else{
+                    var alert = UIAlertView(title:"Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    
+                }
+                
+            
+
+            
+            
+            })
+        }
+        
     }
     @IBAction func signupAction(sender: AnyObject) {
+        self.performSegueWithIdentifier("signup", sender: self)
     }
     
 }

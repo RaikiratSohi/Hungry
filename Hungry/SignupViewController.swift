@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 class SignupViewController: UIViewController {
 
     
@@ -17,10 +17,17 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     
+    var actInd: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0,150,150)) as UIActivityIndicatorView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.actInd.center = self.view.center
+        
+        self.actInd.hidesWhenStopped = true
+        
+        self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        view.addSubview(self.actInd)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,5 +48,51 @@ class SignupViewController: UIViewController {
     //MARK: Actions
     
     
+    @IBAction func signUpAction(sender: AnyObject) {
+        
+        var username = self.usernameField.text
+        var password = self.passwordField.text
+        var email = self.emailField.text
+        
+        
+        
+        if( username?.characters.count < 4 || password?.characters.count < 5 ){
+            var alert = UIAlertView(title:"Invalid", message: "Password must be gretaer than 5.", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        }
+        else if(email?.characters.count < 8){
+            var alert = UIAlertView(title:"Invalid", message: "Please enter valid email", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        }
+        else{
+        
+            self.actInd.startAnimating()
+            
+            var newUser = PFUser()
+            
+            newUser.username = username
+            newUser.password = password
+            newUser.email = email
+            
+            newUser.signUpInBackgroundWithBlock({ (succeed,error) -> Void in
+                
+                self.actInd.stopAnimating()
+                
+                if((error) != nil ){
+                    var alert = UIAlertView(title:"Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                }
+                else{
+                    var alert = UIAlertView(title:"Success", message: "signed up", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                }
+            
+            
+            
+            })
+        }
+        
+        
+    }
 
 }

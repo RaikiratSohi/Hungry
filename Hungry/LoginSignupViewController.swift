@@ -96,4 +96,10 @@ class LoginSignupViewController: UIViewController, PFLogInViewControllerDelegate
     @IBAction func LoginSignupAction(sender: AnyObject){
         self.performSegueWithIdentifier("login" , sender: self)
     }
+    @IBAction func logoutAction(sender: AnyObject) {
+        
+        PFUser.logOut()
+    }
+    
+    
 }
