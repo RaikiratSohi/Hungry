@@ -85,14 +85,9 @@ class SignupViewController: UIViewController {
                 else{
                     var alert = UIAlertView(title:"Success", message: "signed up", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
+                    self.performSegueWithIdentifier("signupswitch" , sender: self)
                 }
-            
-            
-            
             })
         }
-        
-        
     }
-
 }

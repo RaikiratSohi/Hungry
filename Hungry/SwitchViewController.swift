@@ -32,4 +32,14 @@ class SwitchViewController: UIViewController {
     }
     */
 
+    @IBAction func switchEaterView(sender: AnyObject) {
+        self.performSegueWithIdentifier("eater" , sender: self)
+        
+    }
+    
+    
+    @IBAction func switchCookView(sender: AnyObject) {
+        self.performSegueWithIdentifier("cook" , sender: self)
+    }
+    
 }

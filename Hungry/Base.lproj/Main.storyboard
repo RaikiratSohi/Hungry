@@ -49,7 +49,7 @@
         <!--Login View Controller-->
         <scene sceneID="DXv-hN-b6U">
             <objects>
-                <viewController id="VV4-BY-Edx" customClass="LoginViewController" customModule="Hungry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="VV4-BY-Edx" customClass="LoginViewController" customModule="Hungry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z0k-Ug-Gmk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,27 +90,45 @@
                         <outlet property="passwordField" destination="YYR-mX-Sp1" id="wgw-tt-McR"/>
                         <outlet property="usernameField" destination="KBT-vc-Kvr" id="sid-6Z-tq9"/>
                         <segue destination="530-Du-w5t" kind="modal" identifier="signup" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="CWD-NH-Sen"/>
-                        <segue destination="rou-gn-jbg" kind="push" id="LBx-ns-rHS"/>
+                        <segue destination="rou-gn-jbg" kind="modal" identifier="loginswitch" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="LBx-ns-rHS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfz-ca-WvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2009" y="172"/>
         </scene>
-        <!--View Controller-->
+        <!--Switch View Controller-->
         <scene sceneID="0X4-si-90r">
             <objects>
-                <viewController id="rou-gn-jbg" sceneMemberID="viewController">
+                <viewController id="rou-gn-jbg" customClass="SwitchViewController" customModule="Hungry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wxm-0Y-XHR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UCM-dr-LzJ">
+                                <rect key="frame" x="219" y="204" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cook"/>
+                                <connections>
+                                    <action selector="switchCookView:" destination="rou-gn-jbg" eventType="touchUpInside" id="qWy-t7-4mo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8RH-oP-lWm">
+                                <rect key="frame" x="80" y="204" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Eater"/>
+                                <connections>
+                                    <action selector="switchEaterView:" destination="rou-gn-jbg" eventType="touchUpInside" id="AIT-Yk-04f"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="QfO-2M-3oO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDR-yB-3aV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370.1333333333332" y="1018.6133333333333"/>
+            <point key="canvasLocation" x="1781" y="1054"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="Nin-YH-H2e">
@@ -154,11 +172,12 @@
                         <outlet property="emailField" destination="4aJ-6B-VK1" id="K6o-zL-njl"/>
                         <outlet property="passwordField" destination="kez-xJ-lrz" id="xJ5-Px-lDq"/>
                         <outlet property="usernameField" destination="5qq-RC-aVk" id="xFm-id-uCS"/>
+                        <segue destination="rou-gn-jbg" kind="modal" identifier="signupswitch" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="iKb-81-K09"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B67-lR-uII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="809"/>
+            <point key="canvasLocation" x="1024" y="727"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WuP-iz-WbC">
@@ -176,7 +195,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAG-ct-Ug0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500.80000000000001" y="966.54666666666662"/>
+            <point key="canvasLocation" x="632" y="850"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LBx-ns-rHS"/>
+    </inferredMetricsTieBreakers>
 </document>

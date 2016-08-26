@@ -68,6 +68,7 @@ class LoginViewController: UIViewController {
                 if((user) != nil){
                     var alert = UIAlertView(title:"Success", message: "logged in", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
+                    self.performSegueWithIdentifier("loginswitch" , sender: self)
                 }
                 else{
                     var alert = UIAlertView(title:"Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
