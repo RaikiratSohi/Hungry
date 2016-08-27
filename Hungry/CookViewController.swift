@@ -10,21 +10,36 @@ import UIKit
 import Parse
 
 class CookViewController: UIViewController,UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UINavigationControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate {
 
     @IBOutlet weak var titleField: UITextField!
     
     @IBOutlet weak var priceField: UITextField!
-    
-    @IBOutlet weak var typeField: UITextField!
+   
+   // @IBOutlet weak var typeField: UITextField!
     
     @IBOutlet weak var descriptionField: UITextView!
     
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var mealPicker: UIPickerView!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var cusineField: UITextField!
+    
+    @IBOutlet weak var addressField: UITextView!
+    
+    var mealType = ["Breakfast","Lunch","Dinner"]
+    var selectedMealType = "";
+    
+    var pickupDate = "";
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mealPicker.dataSource = self
+        mealPicker.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -47,6 +62,16 @@ UINavigationControllerDelegate {
     }
     
     
+    @IBAction func onDatePickerAction(sender: AnyObject) {
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+        var strDate = dateFormatter.stringFromDate(datePicker.date)
+        pickupDate = strDate
+        
+        
+    }
+    
+    
     @IBAction func onGalleryButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             var imagePicker = UIImagePickerController()
@@ -59,6 +84,26 @@ UINavigationControllerDelegate {
     
     }
     
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return mealType.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return mealType[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedMealType = mealType[row]
+    }
+    
+    
+    
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         imageView.image = image
         self.dismissViewControllerAnimated(true, completion: nil);
@@ -68,8 +113,12 @@ UINavigationControllerDelegate {
         let offer = Offer()
         offer.title = titleField.text ?? ""
         //offer.price = priceField.text ?? 0.0
-        offer.foodType = typeField.text ?? ""
+        offer.foodType = selectedMealType
         offer.foodDescription = descriptionField.text ?? ""
+        offer.pickupTime = pickupDate
+        offer.cusine = cusineField.text ?? ""
+        offer.address = addressField.text ?? ""
+        
         let imageData = UIImagePNGRepresentation(imageView.image!)
         offer.imageFile = PFFile(name:"image.png", data:imageData!)
         
