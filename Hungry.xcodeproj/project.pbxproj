@@ -14,6 +14,7 @@
 		0EC3C2921D5D9F9E000E6CE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC3C2901D5D9F9E000E6CE4 /* LaunchScreen.storyboard */; };
 		0EC3C29D1D5D9F9E000E6CE4 /* HungryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3C29C1D5D9F9E000E6CE4 /* HungryTests.swift */; };
 		0EC3C2A81D5D9F9E000E6CE4 /* HungryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3C2A71D5D9F9E000E6CE4 /* HungryUITests.swift */; };
+		484FB79C1D7108CA0074F64D /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484FB79B1D7108CA0074F64D /* FilterViewController.swift */; };
 		5F959314B9EFE0E7CC19D02B /* Pods_HungryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1B2B9872AD6538B4802753 /* Pods_HungryTests.framework */; };
 		680114011D63899300FF3DF2 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680114001D63899300FF3DF2 /* LoginSignupViewController.swift */; };
 		680114031D6389E900FF3DF2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680114021D6389E900FF3DF2 /* LoginViewController.swift */; };
@@ -77,6 +78,7 @@
 		0EC3C2A71D5D9F9E000E6CE4 /* HungryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryUITests.swift; sourceTree = "<group>"; };
 		0EC3C2A91D5D9F9E000E6CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E1B2B9872AD6538B4802753 /* Pods_HungryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HungryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		484FB79B1D7108CA0074F64D /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		680114001D63899300FF3DF2 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
 		680114021D6389E900FF3DF2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		680114041D638A0200FF3DF2 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				6801142B1D63EF0100FF3DF2 /* Eater.storyboard */,
 				D8AE21DC1D668F6300DC3E99 /* OffersViewController.swift */,
 				D8AE21DE1D66902E00DC3E99 /* OfferCell.swift */,
+				484FB79B1D7108CA0074F64D /* FilterViewController.swift */,
 			);
 			name = Eater;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				680114071D638A2600FF3DF2 /* SwitchViewController.swift in Sources */,
 				680114031D6389E900FF3DF2 /* LoginViewController.swift in Sources */,
 				D869296C1D63F63F002B63C2 /* ParseClient.swift in Sources */,
+				484FB79C1D7108CA0074F64D /* FilterViewController.swift in Sources */,
 				0EC3C28A1D5D9F9E000E6CE4 /* ViewController.swift in Sources */,
 				680114051D638A0200FF3DF2 /* SignupViewController.swift in Sources */,
 				680114011D63899300FF3DF2 /* LoginSignupViewController.swift in Sources */,
