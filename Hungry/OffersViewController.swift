@@ -43,11 +43,32 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
                 self.allOffers = offers
             }
         }
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        
+        ParseClient.queryOffers(20, orderDescendingByKey: "createdAt") { (offers, error) in
+            if nil != offers {
+                print("Got \(offers.count) offers from server")
+                print("First offer is \(offers[0].foodDescription) at \(offers[0].price) for \(offers[0].foodType)")
+                
+                self.offers = offers
+                self.tableView.reloadData()
+                self.allOffers = offers
+                
+                refreshControl.endRefreshing()
+                print("Refreshing completed with \(self.offers!.count) tweets")
+            }
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
