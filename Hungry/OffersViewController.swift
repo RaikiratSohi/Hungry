@@ -33,7 +33,7 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
         searchBar.sizeToFit()
         navigationItem.titleView = searchBar
         
-        ParseClient.queryOffers(10, orderDescendingByKey: nil) { (offers, error) in
+        ParseClient.queryOffers(20, orderDescendingByKey: "createdAt") { (offers, error) in
             if nil != offers {
                 print("Got \(offers.count) offers from server")
                 print("First offer is \(offers[0].foodDescription) at \(offers[0].price) for \(offers[0].foodType)")
