@@ -73,6 +73,15 @@ class OffersViewController: UIViewController, UITableViewDataSource, UITableView
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if ("offerDetailSegue" == segue.identifier) {
+            let detailViewController = segue.destinationViewController as! OfferDetailViewController
+            let cell = sender as! OfferCell
+            let idxPath = tableView.indexPathForCell(cell)
+            
+            let offer = offers[(idxPath?.row)!]
+            
+            detailViewController.offer = offer
+        }
     }
     
     func doSearch() {

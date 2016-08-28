@@ -29,14 +29,24 @@ class OfferCell: UITableViewCell {
     var offer: Offer! {
         didSet {
             // TODO replace with title
-            titleLabel.text = offer.foodDescription
+            titleLabel.text = offer.title
             foodTypeLabel.text = offer.foodType
             priceLabel.text = "$\(offer.price)"
             
             // TODO hide real address
-            pickupAddrLabel.text = "S Murphy Ave, Sunnyvale" //offer.address
+            if (0 == offer.address.lengthOfBytesUsingEncoding(NSUnicodeStringEncoding)) {
+                pickupAddrLabel.text = "S Murphy Ave, Sunnyvale"
+            }
+            else {
+                pickupAddrLabel.text = offer.address
+            }
+            
             // TODO format pick up time
-            pickupTimeLabel.text = "Collection time: 17:45-18:00" //offer.pickupTime
+            if (0 == offer.pickupTime.lengthOfBytesUsingEncoding(NSUnicodeStringEncoding)) {
+                pickupTimeLabel.text = "Collection time: 17:45-18:00"
+            } else {
+                pickupTimeLabel.text = "Collection time: \(offer.pickupTime)"
+            }
             
             if let imageFile = offer.imageFile {
                 imageFile.getDataInBackgroundWithBlock {
@@ -47,6 +57,8 @@ class OfferCell: UITableViewCell {
                         }
                     }
                 }
+            } else {
+                offerImage.image = nil
             }
         }
     }
@@ -66,5 +78,5 @@ class OfferCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
-    }    
+    }
 }
