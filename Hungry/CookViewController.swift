@@ -38,6 +38,9 @@ UINavigationControllerDelegate,UIPickerViewDataSource,UIPickerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: .Plain, target: nil, action: nil)
+        
         mealPicker.dataSource = self
         mealPicker.delegate = self
 

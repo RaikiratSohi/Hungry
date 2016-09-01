@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Vhp-v0-zjg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1vf-wt-n92">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login Signup View Controller-->
         <scene sceneID="GYT-EM-uA1">
             <objects>
                 <viewController id="Vhp-v0-zjg" customClass="LoginSignupViewController" customModule="Hungry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vbe-50-2p2"/>
+                        <viewControllerLayoutGuide type="bottom" id="aVN-F2-x7b"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3KS-Oq-Ekk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3A0-Q8-Fy6">
-                                <rect key="frame" x="267" y="212" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Signup"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Yz-Bz-whx">
-                                <rect key="frame" x="267" y="274" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yz-Bz-whx">
+                                <rect key="frame" x="131" y="395" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutAction:" destination="Vhp-v0-zjg" eventType="touchUpInside" id="guo-rO-GQk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JPQ-h0-Oeb">
-                                <rect key="frame" x="267" y="155" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPQ-h0-Oeb">
+                                <rect key="frame" x="136" y="234" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="LoginSignupAction:" destination="Vhp-v0-zjg" eventType="touchUpInside" id="daf-pC-Bgh"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3A0-Q8-Fy6">
+                                <rect key="frame" x="131" y="300" width="48" height="30"/>
+                                <state key="normal" title="Signup"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,46 +46,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EG-5d-eW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704.5333333333333" y="-154.30666666666667"/>
+            <point key="canvasLocation" x="712" y="-362"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="DXv-hN-b6U">
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="VV4-BY-Edx" customClass="LoginViewController" customModule="Hungry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u6e-N3-uWs"/>
+                        <viewControllerLayoutGuide type="bottom" id="VmN-E3-gI0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z0k-Ug-Gmk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" id="YYR-mX-Sp1">
-                                <rect key="frame" x="131" y="185" width="293" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYR-mX-Sp1">
+                                <rect key="frame" x="51" y="169" width="231" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bpT-Iv-eC5">
-                                <rect key="frame" x="131" y="249" width="293" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpT-Iv-eC5">
+                                <rect key="frame" x="20" y="246" width="280" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginAction:" destination="VV4-BY-Edx" eventType="touchUpInside" id="pMn-Zv-J6M"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="I4r-1Q-8rZ">
-                                <rect key="frame" x="131" y="316" width="293" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KBT-vc-Kvr">
+                                <rect key="frame" x="51" y="94" width="231" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4r-1Q-8rZ">
+                                <rect key="frame" x="20" y="317" width="280" height="30"/>
                                 <state key="normal" title="SignUp"/>
                                 <connections>
                                     <action selector="signupAction:" destination="VV4-BY-Edx" eventType="touchUpInside" id="51N-FT-VwG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" id="KBT-vc-Kvr">
-                                <rect key="frame" x="131" y="123" width="293" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KBT-vc-Kvr" firstAttribute="leading" secondItem="YYR-mX-Sp1" secondAttribute="leading" id="0fu-c7-AwE"/>
+                            <constraint firstItem="YYR-mX-Sp1" firstAttribute="top" secondItem="KBT-vc-Kvr" secondAttribute="bottom" constant="45" id="3QC-Q7-SXD"/>
+                            <constraint firstItem="KBT-vc-Kvr" firstAttribute="leading" secondItem="z0k-Ug-Gmk" secondAttribute="leadingMargin" constant="35" id="6a9-W9-4zt"/>
+                            <constraint firstItem="bpT-Iv-eC5" firstAttribute="trailing" secondItem="I4r-1Q-8rZ" secondAttribute="trailing" id="Be7-Xs-j6o"/>
+                            <constraint firstItem="KBT-vc-Kvr" firstAttribute="trailing" secondItem="YYR-mX-Sp1" secondAttribute="trailing" id="FjS-Rq-ZOM"/>
+                            <constraint firstItem="bpT-Iv-eC5" firstAttribute="leading" secondItem="z0k-Ug-Gmk" secondAttribute="leadingMargin" id="Hbu-Dx-lxj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KBT-vc-Kvr" secondAttribute="trailing" constant="22" id="Hik-ih-FhI"/>
+                            <constraint firstItem="bpT-Iv-eC5" firstAttribute="top" secondItem="YYR-mX-Sp1" secondAttribute="bottom" constant="47" id="X09-D6-GhP"/>
+                            <constraint firstItem="I4r-1Q-8rZ" firstAttribute="leading" secondItem="z0k-Ug-Gmk" secondAttribute="leadingMargin" constant="4" id="bgs-yW-Ebv"/>
+                            <constraint firstItem="KBT-vc-Kvr" firstAttribute="top" secondItem="u6e-N3-uWs" secondAttribute="bottom" constant="74" id="eDQ-Zb-kau"/>
+                            <constraint firstItem="I4r-1Q-8rZ" firstAttribute="centerX" secondItem="z0k-Ug-Gmk" secondAttribute="centerX" id="gnb-AL-JKh"/>
+                            <constraint firstItem="I4r-1Q-8rZ" firstAttribute="top" secondItem="bpT-Iv-eC5" secondAttribute="bottom" constant="41" id="nzF-ST-5Mx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bWe-BZ-KBu"/>
                     <connections>
@@ -95,30 +111,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfz-ca-WvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2009" y="172"/>
+            <point key="canvasLocation" x="1311" y="-362"/>
         </scene>
         <!--Switch View Controller-->
         <scene sceneID="0X4-si-90r">
             <objects>
                 <viewController id="rou-gn-jbg" customClass="SwitchViewController" customModule="Hungry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yci-Dr-ZaQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="USR-DN-qJa"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wxm-0Y-XHR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UCM-dr-LzJ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCM-dr-LzJ">
                                 <rect key="frame" x="219" y="204" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cook"/>
                                 <connections>
                                     <action selector="switchCookView:" destination="rou-gn-jbg" eventType="touchUpInside" id="qWy-t7-4mo"/>
+                                    <segue destination="2UL-6y-xY3" kind="modal" identifier="cookswitch" id="0n0-gp-WEp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8RH-oP-lWm">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RH-oP-lWm">
                                 <rect key="frame" x="80" y="204" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Eater"/>
                                 <connections>
                                     <action selector="switchEaterView:" destination="rou-gn-jbg" eventType="touchUpInside" id="AIT-Yk-04f"/>
+                                    <segue destination="UhH-D6-MRf" kind="modal" identifier="eaterswitch" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="UL6-ra-sDa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -128,42 +148,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDR-yB-3aV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1781" y="1054"/>
+            <point key="canvasLocation" x="1601" y="519"/>
+        </scene>
+        <!--Cook-->
+        <scene sceneID="hzy-7Z-Q13">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="cookswitch" storyboardName="Cook" id="2UL-6y-xY3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="e6s-9a-f6k"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oUv-AA-1tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2095.5" y="311"/>
+        </scene>
+        <!--Eater-->
+        <scene sceneID="qfU-1p-CGB">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="eaterswitch" storyboardName="Eater" id="UhH-D6-MRf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHG-Ux-Wfc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108" y="677"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="Nin-YH-H2e">
             <objects>
                 <viewController id="530-Du-w5t" customClass="SignupViewController" customModule="Hungry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U2U-Mu-AWI"/>
+                        <viewControllerLayoutGuide type="bottom" id="CiH-QN-RDt"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RIn-ye-mnx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="kez-xJ-lrz">
-                                <rect key="frame" x="115" y="233" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kez-xJ-lrz">
+                                <rect key="frame" x="49" y="233" width="231" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="4aJ-6B-VK1">
-                                <rect key="frame" x="115" y="272" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aJ-6B-VK1">
+                                <rect key="frame" x="49" y="305" width="231" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eQv-Ew-aVT">
-                                <rect key="frame" x="115" y="348" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qq-RC-aVk">
+                                <rect key="frame" x="49" y="160" width="231" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQv-Ew-aVT">
+                                <rect key="frame" x="113" y="367" width="94" height="30"/>
                                 <state key="normal" title="SignUp"/>
                                 <connections>
                                     <action selector="signUpAction:" destination="530-Du-w5t" eventType="touchUpInside" id="B0M-sO-H9S"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" id="5qq-RC-aVk">
-                                <rect key="frame" x="115" y="160" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -177,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B67-lR-uII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024" y="727"/>
+            <point key="canvasLocation" x="1010" y="519"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WuP-iz-WbC">
@@ -195,10 +233,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAG-ct-Ug0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="850"/>
+            <point key="canvasLocation" x="146" y="-362"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LBx-ns-rHS"/>
+        <segue reference="iKb-81-K09"/>
     </inferredMetricsTieBreakers>
 </document>

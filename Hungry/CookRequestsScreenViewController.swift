@@ -1,14 +1,14 @@
 //
-//  SwitchViewController.swift
+//  CookRequestsScreenViewController.swift
 //  Hungry
 //
-//  Created by Raikirat Sohi on 8/16/16.
+//  Created by Raikirat Sohi on 8/27/16.
 //  Copyright © 2016 Raikirat Sohi. All rights reserved.
 //
 
 import UIKit
 
-class SwitchViewController: UIViewController {
+class CookRequestsScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +31,11 @@ class SwitchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-    @IBAction func switchEaterView(sender: AnyObject) {
-        self.performSegueWithIdentifier("eaterswitch" , sender: self)
+    //Mark ACTIONS
+    
+    @IBAction func AddNewFoodEntry(sender: AnyObject) {
         
+        self.performSegueWithIdentifier("newfood" , sender: self)
     }
-    
-    
-    @IBAction func switchCookView(sender: AnyObject) {
-        self.performSegueWithIdentifier("cookswitch" , sender: self)
-    }
-    
+
 }
